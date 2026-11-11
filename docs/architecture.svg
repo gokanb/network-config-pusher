@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="260" viewBox="0 0 860 260" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="860" height="260" rx="14" fill="#0d1117"/>
+  <text x="430" y="40" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">network-config-pusher — pipeline</text>
+
+  <!-- Stage boxes -->
+  <g>
+    <rect x="30" y="95" width="150" height="70" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="105" y="125" text-anchor="middle" fill="#58a6ff" font-size="14" font-weight="700">devices.txt</text>
+    <text x="105" y="146" text-anchor="middle" fill="#8b949e" font-size="12">list of device IPs</text>
+  </g>
+
+  <g>
+    <rect x="215" y="95" width="150" height="70" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="290" y="125" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">Validate IPs</text>
+    <text x="290" y="146" text-anchor="middle" fill="#8b949e" font-size="12">ipaddress module</text>
+  </g>
+
+  <g>
+    <rect x="400" y="95" width="150" height="70" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="475" y="125" text-anchor="middle" fill="#d29922" font-size="14" font-weight="700">Ping check</text>
+    <text x="475" y="146" text-anchor="middle" fill="#8b949e" font-size="12">reachable only</text>
+  </g>
+
+  <g>
+    <rect x="585" y="80" width="245" height="100" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="707" y="112" text-anchor="middle" fill="#bc8cff" font-size="14" font-weight="700">SSH + push commands</text>
+    <text x="707" y="133" text-anchor="middle" fill="#8b949e" font-size="12">paramiko · all devices</text>
+    <text x="707" y="151" text-anchor="middle" fill="#8b949e" font-size="12">in parallel (threads)</text>
+    <text x="707" y="169" text-anchor="middle" fill="#8b949e" font-size="12">per-device result</text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#6e7681" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="180" y1="130" x2="212" y2="130"/>
+    <line x1="365" y1="130" x2="397" y2="130"/>
+    <line x1="550" y1="130" x2="582" y2="130"/>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6e7681"/>
+    </marker>
+  </defs>
+
+  <text x="430" y="225" text-anchor="middle" fill="#8b949e" font-size="12">One slow or unreachable device never blocks the others.</text>
+</svg>
