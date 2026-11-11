@@ -1,0 +1,4 @@
+interface loopback0
+ ip address 10.10.10.10 255.255.255.255
+ no shutdown
+exit
