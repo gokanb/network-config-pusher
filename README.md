@@ -16,6 +16,10 @@ addresses, checks which devices are reachable, then opens an SSH session to ever
 reachable device **in parallel** and runs the commands. It's the kind of task a
 network or security engineer would otherwise do by hand, device by device.
 
+## How it works
+
+![Pipeline architecture](docs/architecture.svg)
+
 ## Features
 
 - Validates IPv4 addresses using Python's standard `ipaddress` module
